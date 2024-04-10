@@ -48,7 +48,6 @@ export class UploadDocumentComponent implements OnInit {
     if (fileType !== 'pdf') {
       // Reset the value of the input and display an error message
       event.target.value = '';
-      // alert('Please select a PDF file.');
       this.file2Valid = true;
       this.fileToUpload2 = null;
     } else {

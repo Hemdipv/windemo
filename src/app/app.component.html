@@ -1,0 +1,10 @@
+<div class="header">
+    <a href="#default" class="logo">Windemo</a>
+    <div class="header-right">
+      <a [class.active]="activeLink === 'upload-document'" (click)="setActiveLink('upload-document')" routerLink="">Upload Document</a>
+      <a [class.active]="activeLink === 'upload-question'" (click)="setActiveLink('upload-question')" routerLink="/upload-question">Upload Question</a>
+      <a [class.active]="activeLink === 'index'" (click)="setActiveLink('index')" routerLink="/index">Index</a>
+    </div>
+  </div>
+  <router-outlet></router-outlet>
+  

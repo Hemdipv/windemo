@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+<body>
+    <form [formGroup]="addDocumentForm">
+        <div class="container">
+          <h2 style="text-align: center;">Upload Question</h2>
+             <div> <label for="email"><b>File 1</b></label>
+            <input type="file" formControlName="file1" name="username" placeholder="Select File" (change)="onFileSelected($event)" required>
+            <span class="error" *ngIf="submitted && addDocumentForm.controls['file1'].errors?.['required']">Please Select File1.</span><br>
+            <span class="error" *ngIf="!addDocumentForm.controls['file1'].errors?.['required'] && file1Valid">Please upload a pdf file.</span><br>
+        </div>
+        
+          <div class="clearfix">
+      
+            <button type="submit" class="btn" (click)="submitDocumentForm()">Upload Question</button>
+          </div>
+        </div>
+      </form>
+
+
+</body>
+</html>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'windemo';
+
+  activeLink: string = 'upload-document'; // Set default active link
+
+  setActiveLink(link: string) {
+    this.activeLink = link;
+  }
 }
